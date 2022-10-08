@@ -2,4 +2,6 @@
 <button class="btn btn-primary" (click)="gotocategory()">goto Category</button>
 <h1>{{user.name}}</h1>
 <h1>{{user.id}}</h1>
-<div><a [routerLink]="['/User',1,'mangal']">get the details of mangal</a></div>
+<!-- <div><a [routerLink]="['/User',1,'mangal']" [queryParams]="{page:1,search:'mangal'}"[fragment]="'load'">get the details of mangal</a></div> -->
+<div><a (click)="getmangaldetails()">get the details of mangal</a></div>
+

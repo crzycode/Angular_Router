@@ -30,5 +30,12 @@ user!:{id:string,name:string};
   gotocategory(){
 this.router.navigate(['/Category'])
   }
+  getmangaldetails(){
+    this.router.navigate(['/User',2,'mangal'],
+    {queryParams:{page:2,search:'mangla'},
+    fragment:'loading'
+
+  })
+  }
 
 }
