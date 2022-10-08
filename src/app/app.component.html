@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-     <div class="nav flex-column">
-      <li class="nav-item"> <a href="/">Home</a> </li>
-      <li class="nav-item"><a href="/User">User</a></li>
-      <li class="nav-item"><a href="/Category">Category</a></li>
+     <div class="nav flex-column nav-pills">
+      <li class="nav-item"> <a
+        class="nav-link"
+         [routerLink]="['/']"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}"
+          >Home</a> </li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['User']" routerLinkActive="active">User</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['Category']" routerLinkActive="active">Category</a></li>
      </div>
     </div>
     <div class="col-md-9">
