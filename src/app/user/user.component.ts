@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
 
-  constructor(private router: Router) { }
+export class UserComponent implements OnInit {
+user!:{id:string,name:string};
+  constructor(private router: Router, private route: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
+
+    this.user = {
+      id: this.route.snapshot.params['id'],
+      name: this.route.snapshot.params['name']
+    }
   }
   gotocategory(){
 this.router.navigate(['/Category'])
   }
+
 }

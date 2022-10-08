@@ -12,6 +12,7 @@ import {CategoryComponent} from './category/category.component'
 const approutes: Routes = [
   {path:'', component:HomeComponent},
   {path:'User', component:UserComponent},
+  {path:'User/:id/:name', component:UserComponent},
   {path:'Category', component:CategoryComponent},
 ]
 @NgModule({
