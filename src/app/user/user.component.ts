@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -19,6 +19,13 @@ user!:{id:string,name:string};
       id: this.route.snapshot.params['id'],
       name: this.route.snapshot.params['name']
     }
+    this.route.params.subscribe((data:Params) =>{
+      this.user={
+        id:data['id'],
+        name:data['name']
+      };
+    })
+
   }
   gotocategory(){
 this.router.navigate(['/Category'])
