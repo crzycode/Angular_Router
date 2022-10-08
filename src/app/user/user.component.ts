@@ -24,18 +24,32 @@ user!:{id:string,name:string};
         id:data['id'],
         name:data['name']
       };
-    })
+    });
+//get the query params data and fragment data
+    this.route.queryParams.subscribe((data:any) =>{
+      console.log(data);
+     });
+     this.route.fragment.subscribe((data)=>{
+      console.log(data)
+     })
 
   }
+
   gotocategory(){
 this.router.navigate(['/Category'])
   }
+  //programatically use the query params
   getmangaldetails(){
     this.router.navigate(['/User',2,'mangal'],
     {queryParams:{page:2,search:'mangla'},
     fragment:'loading'
 
   })
+
   }
+  //Retrive the query params and fragment
+
+
+
 
 }
